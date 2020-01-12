@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "modenessprices"
+	},
+	{
+		"path": "frontend"
+	},
+	{
+		"path": "pricingPage"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "pricingPage"
+  }
+}

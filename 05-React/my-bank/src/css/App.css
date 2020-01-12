@@ -1,0 +1,56 @@
+/* DEBUG */
+[debug],
+[debug] * {
+  outline: solid 1px #9400ff;
+  box-shadow: none;
+  filter: none;
+}
+
+/* -------------------- GLOBAL RULES -------------------- */
+/* On utilise les CSS variables pour définir les couleurs
+ * https://developer.mozilla.org/fr/docs/Web/CSS/Using_CSS_custom_properties
+*/
+:root {
+  --black: #1d262b;
+  --white: #ffffff;
+  /*   --linearPink0: rgba(252, 128, 189, 0.59);
+  --linearPink1: hsla(328, 87%, 45%, 0.41); */
+}
+
+/**************************************** Header ***************************** */
+header {
+  height: 100px;
+  background-color: #1d262b;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+header h1 {
+  color: white;
+  margin: 0;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.user {
+  color: white;
+}
+
+.user p {
+  margin: 0;
+  font-size: x-large;
+  margin-right: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  color: #1d262b;
+  padding: 8px;
+  border-radius: 100%;
+  background: white;
+}

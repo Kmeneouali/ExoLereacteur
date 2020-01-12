@@ -9,13 +9,12 @@
 // Début de votre code
 
 const lowerFirst = str => {
-  /* let tab = str.split("");
+  let tab = str.split("");
   let firstLettre = tab[0].toLowerCase();
   tab.shift(0);
   tab.unshift(firstLettre);
 
-  return tab.join(""); */
-  return;
+  return tab.join("");
 };
 
 // Fin de votre code

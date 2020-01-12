@@ -1,28 +1,52 @@
 const axios = require("axios");
+var clc = require("cli-color");
 const apiId = "8deb24bc45e41ba38fd32fcbbd450e0d";
 const ville = process.argv[2];
 const route = `https://api.openweathermap.org/data/2.5/weather?q=${ville}&appid=${apiId}`;
 
 const onResponse = response => {
   const meteo = response.data;
-  console.log("+-------------------------+");
-  console.log("| Pays : " + meteo.sys.country);
-  console.log("| Ville : " + meteo.name);
-  console.log("+-------------------------+");
-  console.log("| Description : " + meteo.weather[0].description);
-  console.log("+-------------------------+");
-  console.log("| Temperature : " + meteo.main.temp);
-  console.log("| Temperature Max : " + meteo.main.temp_max);
-  console.log("| Temperature Min : " + meteo.main.temp_min);
-  console.log("| Humidite : " + meteo.main.humidity);
-  console.log("| Pression : " + meteo.main.pressure);
-  console.log("+-------------------------+");
-  console.log("| Vitesse du vent : " + meteo.wind.speed);
-  console.log("| Orientaton du vent : " + meteo.wind.deg);
-  console.log("+-------------------------+");
-  console.log("| Leve du Soleil : " + meteo.sys.sunrise);
-  console.log("| Couche du Soleil : " + meteo.sys.sunset);
-  console.log("+-------------------------+");
+  const pip = clc.red("|");
+  console.log(clc.red("+") + "-".padEnd(30, "-") + clc.red("+"));
+  console.log(pip + (" Pays : " + meteo.sys.country).padEnd(30, " ") + pip);
+  console.log(pip + (" Ville : " + meteo.name).padEnd(30, " ") + pip);
+  console.log(clc.red("+") + "-".padEnd(30, "-") + clc.red("+"));
+  console.log(
+    pip +
+      (" Description : " + meteo.weather[0].description).padEnd(30, " ") +
+      pip
+  );
+  console.log(clc.red("+") + "-".padEnd(30, "-") + clc.red("+"));
+  console.log(
+    pip + (" Temperature : " + meteo.main.temp).padEnd(30, " ") + pip
+  );
+  console.log(
+    pip + (" Temperature Max : " + meteo.main.temp_max).padEnd(30, " ") + pip
+  );
+  console.log(
+    pip + (" Temperature Min : " + meteo.main.temp_min).padEnd(30, " ") + pip
+  );
+  console.log(
+    pip + (" Humidite : " + meteo.main.humidity).padEnd(30, " ") + pip
+  );
+  console.log(
+    pip + (" Pression : " + meteo.main.pressure).padEnd(30, " ") + pip
+  );
+  console.log(clc.red("+") + "-".padEnd(30, "-") + clc.red("+"));
+  console.log(
+    pip + (" Vitesse du vent : " + meteo.wind.speed).padEnd(30, " ") + pip
+  );
+  console.log(
+    pip + (" Orientaton du vent : " + meteo.wind.deg).padEnd(30, " ") + pip
+  );
+  console.log(clc.red("+") + "-".padEnd(30, "-") + clc.red("+"));
+  console.log(
+    pip + (" Leve du Soleil : " + meteo.sys.sunrise).padEnd(30, " ") + pip
+  );
+  console.log(
+    pip + (" Couche du Soleil : " + meteo.sys.sunset).padEnd(30, " ") + pip
+  );
+  console.log(clc.red("+") + "-".padEnd(30, "-") + clc.red("+"));
 
   /*   +-------------------------+
   | Pays : Fr               |

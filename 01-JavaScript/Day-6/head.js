@@ -8,8 +8,9 @@
 */
 // Début de votre code
 const head = array => {
+  // ma methode shift permet de retirer le premier element d'un tableau et renvoier cette element cette methode change la longueur du tableau
   const firstElem = array.shift();
-  //const firstElem = array.slice(1);
+  //const firstElem = array[0]);
   return firstElem;
 };
 

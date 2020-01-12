@@ -1,0 +1,132 @@
+/* DEBUG */
+[debug],
+[debug] * {
+  outline: solid 1px #9400ff;
+  box-shadow: none;
+  filter: none;
+}
+
+/* -------------------- GLOBAL RULES -------------------- */
+/* On utilise les CSS variables pour définir les couleurs
+ * https://developer.mozilla.org/fr/docs/Web/CSS/Using_CSS_custom_properties
+*/
+:root {
+  --black: #1d262b;
+  --white: #ffffff;
+  --blue: #1976d2;
+  /*   --linearPink0: rgba(252, 128, 189, 0.59);
+  --linearPink1: hsla(328, 87%, 45%, 0.41); */
+}
+
+body {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+/********************************** Header ************************ */
+header {
+  height: 100px;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+header h1 {
+  color: var(--white);
+  margin: 0;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.header--user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--white);
+  justify-content: center;
+}
+
+.header--user p {
+  margin: 0;
+  font-size: x-large;
+  margin-right: 10px;
+}
+
+.header--user--icon {
+  width: 30px;
+  height: 30px;
+  color: var(--black);
+  padding: 8px;
+  border-radius: 100%;
+  background: var(--white);
+}
+
+/* ******************************** Contents *********************** */
+.content {
+  margin: auto;
+  width: 80%;
+}
+
+.accounts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  width: 100%;
+}
+
+.account--header {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 98%;
+  border-radius: 5px;
+  margin-top: 70px;
+  padding: 5px;
+  background: var(--blue);
+  color: var(--white);
+}
+
+.account--operations {
+  margin: 0 1rem;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  width: 100%;
+}
+.operation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.operation:nth-child(even) {
+  background: #f7f7f7;
+}
+
+.operation--date {
+  color: #455a64;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+}
+
+.operation--description {
+  flex: 1;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+.operation--amount {
+  font-family: "Ubuntu Mono", monospace;
+  padding: 0 1rem;
+}

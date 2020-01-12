@@ -1,0 +1,29 @@
+.counterA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border: 2px solid blue;
+  width: 70px;
+}
+
+.counterB {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border: 2px solid red;
+  width: 70px;
+}
+
+.counterC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border: 2px solid green;
+  width: 70px;
+}
+span {
+  margin: 10px;
+}

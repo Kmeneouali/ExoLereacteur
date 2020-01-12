@@ -26,6 +26,12 @@ const deburr = str => {
   }
   return str.join("");
 };
+
+/* const deburr = str => {
+  // https://stackoverflow.com/questions/990904/remove-accents-diacritics-in-a-string-in-javascript
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}; */
+
 // Fin de votre code
 console.log(deburr("déjà vu")); // Doit afficher `deja vu`
 console.log(deburr("Juan José")); // Doit afficher `Juan Jose`
